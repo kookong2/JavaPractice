@@ -1,9 +1,9 @@
-method-and-api-practice-01/.gradle
-method-and-api-practice-01/build.gradle
-method-and-api-practice-01/gradle
-method-and-api-practice-01/gradlew
-method-and-api-practice-01/gradlew.bat
-method-and-api-practice-01/settings.gradle
+*/.gradle
+*/build.gradle
+*/gradle
+*/gradlew
+*/gradlew.bat
+*/settings.gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
