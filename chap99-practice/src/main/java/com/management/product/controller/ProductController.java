@@ -57,7 +57,22 @@ public class ProductController {
         //　  (조건 2) Service 객체를 호출하여 등록을 수행하고, 결과를 boolean 값으로 return 받으세요.
         //    (조건 3) insert가 정상적으로 수행된 경우, Print 객체를 통해 등록 성공했다는 성공 메세지를 출력하세요.
         //    (조건 4) insert가 정상적으로 수행되지 않은 경우, Print 객체를 통해 등록 실패했다는 오류 메세지를 출력하세요.
+        product.setProductName(product.getProductName());
+        product.setProductCode(product.getProductCode());
+        product.setOriginCost(product.getOriginCost());
+        product.setReleaseDate(product.getReleaseDate().replaceAll("-",""));
+        product.setDiscountRate(product.getDiscountRate());
+        product.setSalesQuantity(String.valueOf(0));
+        product.setStockQuantity(product.getStockQuantity());
+        product.setCategoryCode(product.getCategoryCode());
+        product.setProductionStatus("Y");
 
+
+        if(productService.registNewProduct(product)){
+            productPrint.printSuccessMessage("registProduct");
+        }else {
+            productPrint.printErrorMessage("registProduct");
+        }
     }
 
     public void modifyProductInfo(ProductDTO product) {
