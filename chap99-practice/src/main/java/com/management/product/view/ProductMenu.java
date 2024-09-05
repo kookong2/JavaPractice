@@ -73,6 +73,7 @@ public class ProductMenu {
                 break;
             case 3 :
                 searchOption = "newProduct";
+                searchValue = "";
                 break;
             case 4 :
                 searchOption = "nonProduction";
@@ -82,7 +83,8 @@ public class ProductMenu {
             }
 
         SearchCondition searchCondition = new SearchCondition();
-        // 주석을 지우고 searchCondition 검색조건과 검색어를 searchCondition 객체에 setting 하세요.
+        searchCondition.setOption(searchOption);
+        searchCondition.setValue(searchValue);
 
         return searchCondition;
     }
