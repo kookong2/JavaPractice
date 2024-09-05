@@ -54,6 +54,8 @@ public class ProductPrint {
                 break;
         }
 
+        System.out.println(errorMessage);
+
     }
 
 }
