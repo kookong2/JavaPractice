@@ -61,8 +61,8 @@ public class ProductDTO {
         return discountRate;
     }
 
-    public void setDiscount_Rate(String discount_Rate) {
-        this.discountRate = discount_Rate;
+    public void setDiscountRate(String discountRate) {
+        this.discountRate = discountRate;
     }
 
     public String getReleaseDate() {
