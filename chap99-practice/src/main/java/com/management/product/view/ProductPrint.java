@@ -36,6 +36,14 @@ public class ProductPrint {
 
         // 3. 성공메시지를 출력하는 메소드
         //    (조건) 성공코드를 전달받아 성공을 알리는 메시지를 출력하세요.
+        System.out.println("==== SUCCESS ====");
+        String successMessage = "";
+        switch (successCode) {
+            case "registProduct":
+                successMessage = "제품 등록에 성공했습니다.";
+                break;
+        }
+        System.out.println(successMessage);
 
     }
 
@@ -51,6 +59,9 @@ public class ProductPrint {
                 break;
             case "selectProductList":
                 errorMessage = "일부 목록 조회에 실패했습니다.";
+                break;
+            case "registProduct":
+                errorMessage = "제품 등록에 실패했습니다.";
                 break;
         }
 
