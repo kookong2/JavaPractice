@@ -146,6 +146,12 @@ public class ProductMenu {
         String discountRate  = sc.nextLine();
 
         // 주석을 지우고 받아온 정보들을 productDTO 객체에 setting 하세요.
+        productDTO.setProductName(productName);
+        productDTO.setCategoryCode(categoryCode);
+        productDTO.setOriginCost(originCost);
+        productDTO.setReleaseDate(releaseDate);
+        productDTO.setStockQuantity(stockQuantity);
+        productDTO.setDiscountRate(discountRate);
 
         return productDTO;
     }
