@@ -79,7 +79,11 @@
 
             <!-- 이달의 신상품 검색 조건 (option == '3') -->
             <if test="option == 'newProduct'">
-                AND DATE_FORMAT(STR_TO_DATE(release_date, '%Y-%m-%d'), '%Y-%m') = DATE_FORMAT(CURRENT_DATE, '%Y-%m')
+                MONTH(STR_TO_DATE(release_date, '%Y%m%d')) = MONTH(CURDATE())
+            </if>
+
+            <if test="option == 'nonProduction'">
+                production_status = 'N'
             </if>
         </where>
     </select>
