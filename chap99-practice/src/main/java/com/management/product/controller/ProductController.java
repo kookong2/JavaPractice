@@ -83,7 +83,21 @@ public class ProductController {
         //　  (조건 2) Service 객체를 호출하여 수정을 수행하고, 결과를 boolean 값으로 return 받으세요.
         //    (조건 3) update가 정상적으로 수행된 경우, Print 객체를 통해 수정 성공했다는 성공 메세지를 출력하세요.
         //    (조건 4) update가 정상적으로 수행되지 않은 경우, Print 객체를 통해 수정 실패했다는 오류 메세지를 출력하세요.
+        product.setProductName(product.getProductName());
+        product.setProductCode(product.getProductCode());
+        product.setOriginCost(product.getOriginCost());
+        product.setReleaseDate(product.getReleaseDate().replaceAll("-",""));
+        product.setDiscountRate(product.getDiscountRate());
+        product.setSalesQuantity(product.getSalesQuantity());
+        product.setStockQuantity(product.getStockQuantity());
+        product.setCategoryCode(product.getCategoryCode());
+        product.setProductionStatus(product.getProductionStatus());
 
+        if(productService.modifyProductInfo(product)){
+            productPrint.printSuccessMessage("updateProduct");
+        }else {
+            productPrint.printErrorMessage("updateProduct");
+        }
     }
 
     public void deleteProduct(Map<String, String> parameter) {

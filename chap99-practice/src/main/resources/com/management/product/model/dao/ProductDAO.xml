@@ -99,6 +99,21 @@
 
     <!-- 6. 사용자가 수정을 원하는 데이터만 수정하도록 Dynamic Query를 활용한 쿼리를 작성하세요.
             (쿼리id) updateProduct -->
+    <update id="modifyProductInfo" parameterType="ProductDTO">
+        UPDATE
+            product_info
+        SET
+            product_name = #{productName},
+            origin_cost = #{originCost},
+            release_date = #{releaseDate},
+            discount_rate = #{discountRate},
+            sales_quantity = #{salesQuantity},
+            stock_quantity =  #{stockQuantity},
+            category_code = #{categoryCode},
+            production_status = #{productionStatus}
+        WHERE
+            product_code = #{productCode}
+    </update>
 
     <!-- 7. 제품 정보를 삭제하는 쿼리를 작성하세요.
             (쿼리id) deleteProduct -->

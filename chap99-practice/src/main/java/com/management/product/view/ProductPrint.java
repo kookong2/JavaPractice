@@ -42,6 +42,9 @@ public class ProductPrint {
             case "registProduct":
                 successMessage = "제품 등록에 성공했습니다.";
                 break;
+            case "updateProduct" :
+                successMessage = "제품 수정에 성공했습니다.";
+                break;
         }
         System.out.println(successMessage);
 
@@ -62,6 +65,9 @@ public class ProductPrint {
                 break;
             case "registProduct":
                 errorMessage = "제품 등록에 실패했습니다.";
+                break;
+            case "updateProduct":
+                errorMessage = "제품 수정에 실패했습니다.";
                 break;
         }
 

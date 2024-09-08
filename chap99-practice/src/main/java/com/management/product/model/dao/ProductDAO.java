@@ -12,6 +12,7 @@ public interface ProductDAO {
 
     int registNewProduct(ProductDTO product);
 
-    // * 주석을 지우고 Mapper interface(= DAO class) 역할을 하도록 내용을 작성하세요.
+    int modifyProductInfo(ProductDTO product);
+
 
 }
